@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -52,6 +53,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ],
       ),
         title: Text(widget.title),
+        
       ),
       body: TabBarView(
             children: [
@@ -61,33 +63,6 @@ class _MyHomePageState extends State<MyHomePage> {
               Icon(Icons.directions_bike),
             ],
       ),
-      
-      //tabBar // This trailing comma makes auto-formatting nicer for build methods.
-    )));
-  }
-}
-class Mydrawer extends StatelessWidget {
-  final appTitle = 'Drawer Demo';
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: appTitle,
-      home: MyHomePage(title: appTitle),
-    );
-  }
-}
-
-class MyHomedrawer extends StatelessWidget {
-  final String title;
-
-  MyHomedrawer({Key key, this.title}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text(title)),
-      body: Center(child: Text('My Page!')),
       drawer: Drawer(
         // Add a ListView to the drawer. This ensures the user can scroll
         // through the options in the drawer if there isn't enough vertical
@@ -99,7 +74,7 @@ class MyHomedrawer extends StatelessWidget {
             DrawerHeader(
               child: Text('Drawer Header'),
               decoration: BoxDecoration(
-                color: Colors.blue,
+                color: Colors.green[900],
               ),
             ),
             ListTile(
@@ -123,6 +98,20 @@ class MyHomedrawer extends StatelessWidget {
           ],
         ),
       ),
+      
+      //tabBar // This trailing comma makes auto-formatting nicer for build methods.
+    )));
+  }
+}
+class Mydrawer extends StatelessWidget {
+  final appTitle = 'Drawer Demo';
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: appTitle,
+      home: MyHomePage(title: appTitle),
     );
   }
 }
+
