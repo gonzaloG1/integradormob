@@ -43,10 +43,10 @@ class _MyHomePageState extends State<MyHomePage> {
     home: DefaultTabController(
       length: 4,
     child: Scaffold(
-
+          
       appBar: AppBar(backgroundColor:Colors.green, bottom: TabBar(
         tabs: [
-                Tab(icon: Icon(Icons.home)),
+                Tab(icon: Icon(Icons.home,)),
                 Tab(icon: Icon(Icons.shopping_cart)),
                 Tab(icon: Icon(Icons.dashboard)),
                 Tab(icon: Icon(Icons.assignment_ind)),
@@ -63,22 +63,44 @@ class _MyHomePageState extends State<MyHomePage> {
               Icon(Icons.directions_bike),
             ],
       ),
+      
       drawer: Drawer(
         // Add a ListView to the drawer. This ensures the user can scroll
         // through the options in the drawer if there isn't enough vertical
         // space to fit everything.
+        
+         
         child: ListView(
+          
           // Important: Remove any padding from the ListView.
           padding: EdgeInsets.zero,
           children: <Widget>[
             DrawerHeader(
-              child: Text('Drawer Header'),
-              decoration: BoxDecoration(
-                color: Colors.green[900],
-              ),
+              child: Container(
+                padding: EdgeInsets.only(left:15,
+                right: 15),
+                color:Colors.green,
+                child: ListView(
+                  children: <Widget>[
+                    ListTile( 
+                      leading: Icon(Icons.home),
+                    ),
+              Text('Información de tu perfil'),
+              Container( 
+                width: 25.0,
+      height: 15.0,
+      decoration: new BoxDecoration(
+          shape: BoxShape.circle,
+          image: new DecorationImage(
+          fit: BoxFit.fill,
+          image: new NetworkImage(
+                 "https://i.imgur.com/BoN9kdC.png")
+                 )
+)                
+              ),]))
             ),
             ListTile(
-              title: Text('Item 1'),
+              title: Text('Tu foto'),
               onTap: () {
                 // Update the state of the app
                 // ...
@@ -87,7 +109,25 @@ class _MyHomePageState extends State<MyHomePage> {
               },
             ),
             ListTile(
-              title: Text('Item 2'),
+              title: Text('Nombre'),
+              onTap: () {
+                // Update the state of the app
+                // ...
+                // Then close the drawer
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              title: Text('Correo'),
+              onTap: () {
+                // Update the state of the app
+                // ...
+                // Then close the drawer
+                Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              title: Text('Descripcion'),
               onTap: () {
                 // Update the state of the app
                 // ...
