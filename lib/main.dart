@@ -10,7 +10,6 @@ class MyApp extends StatelessWidget {
       title: 'Kiraw',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-       
         primarySwatch: Colors.blue,
       ),
       home: MyHomePage(title: 'Kiraw'),
@@ -28,15 +27,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      
-      _counter++;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -74,7 +64,7 @@ class _MyHomePageState extends State<MyHomePage> {
             DrawerHeader(
               child: Text('Drawer Header'),
               decoration: BoxDecoration(
-                color: Colors.green[900],
+                color: Colors.green[800],
               ),
             ),
             ListTile(
