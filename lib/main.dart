@@ -53,11 +53,15 @@ class _MyHomePageState extends State<MyHomePage> {
               Icon(Icons.directions_bike),
             ],
       ),
+      
       drawer: Drawer(
         // Add a ListView to the drawer. This ensures the user can scroll
         // through the options in the drawer if there isn't enough vertical
         // space to fit everything.
+        
+         
         child: ListView(
+          
           // Important: Remove any padding from the ListView.
           padding: EdgeInsets.zero,
           children: <Widget>[
@@ -68,7 +72,7 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ),
             ListTile(
-              title: Text('Item 1'),
+              title: Text('Correo'),
               onTap: () {
                 // Update the state of the app
                 // ...
@@ -77,7 +81,7 @@ class _MyHomePageState extends State<MyHomePage> {
               },
             ),
             ListTile(
-              title: Text('Item 2'),
+              title: Text('Descripcion'),
               onTap: () {
                 // Update the state of the app
                 // ...
