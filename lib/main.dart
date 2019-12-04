@@ -45,10 +45,10 @@ class _MyHomePageState extends State<MyHomePage> {
     home: DefaultTabController(
       length: 4,
     child: Scaffold(
-          
+
       appBar: AppBar(backgroundColor:Colors.green, bottom: TabBar(
         tabs: [
-                Tab(icon: Icon(Icons.home,)),
+                Tab(icon: Icon(Icons.home)),
                 Tab(icon: Icon(Icons.shopping_cart)),
                 Tab(icon: Icon(Icons.dashboard)),
                 Tab(icon: Icon(Icons.assignment_ind)),
