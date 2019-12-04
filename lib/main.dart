@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+//import 'package:integradormob/Login.dart';
+
 
 
 void main() => runApp(MyApp());
@@ -10,10 +12,17 @@ class MyApp extends StatelessWidget {
       title: 'Kiraw',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-       
+        
         primarySwatch: Colors.blue,
+        buttonTheme: ButtonThemeData(height: 50,),
+        textTheme: TextTheme(
+          button:TextStyle(
+            fontSize:15,
+            color:Colors.white
+          )
+        )
       ),
-      home: MyHomePage(title: 'Kiraw'),
+      home: MyApp(),
     );
   }
 }
@@ -28,14 +37,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
 
-  void _incrementCounter() {
-    setState(() {
-      
-      _counter++;
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -57,8 +59,37 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: TabBarView(
             children: [
-              Icon(Icons.directions_car),
-              Icon(Icons.directions_transit),
+              Container(
+                child: ListView(
+                  children: <Widget>[
+                      Container(height:200,color: Colors.black),Container(height:200,color: Colors.white,),Container(height:600,color:Colors.yellow,)
+                  ],
+                )
+
+              ),
+              
+                   Container(
+                     child: ListView (
+                       children:<Widget>[
+                                     Container( 
+                width: 85.0,
+      height: 75.0,
+      
+      decoration: new BoxDecoration(
+          
+          image: new DecorationImage(
+          fit: BoxFit.fill,
+          image: new NetworkImage(
+                 "https://i.imgur.com/BoN9kdC.png")
+                 )
+)                
+              )
+                       ]
+                     
+                     )
+                      
+                   ),
+              
               Icon(Icons.directions_bike),
               Icon(Icons.directions_bike),
             ],
@@ -83,12 +114,10 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: ListView(
                   children: <Widget>[
                     ListTile( 
-                      leading: Icon(Icons.home),
-                    ),
-              Text('Información de tu perfil'),
-              Container( 
-                width: 25.0,
-      height: 15.0,
+                      leading:Container( 
+                width: 85.0,
+      height: 75.0,
+      
       decoration: new BoxDecoration(
           shape: BoxShape.circle,
           image: new DecorationImage(
@@ -97,7 +126,11 @@ class _MyHomePageState extends State<MyHomePage> {
                  "https://i.imgur.com/BoN9kdC.png")
                  )
 )                
-              ),]))
+              ),                  
+                    ),
+                    Text(''),Text(''),Text(''),
+              Text('Información de tu perfil',textDirection: TextDirection.rtl,),
+              ]))
             ),
             ListTile(
               title: Text('Tu foto'),
